@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Nanum_Myeongjo } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
@@ -8,6 +7,7 @@ import ContactForm from "./_components/ContactForm";
 import HeaderImage from "./_components/HeaderImage";
 import ProductInfo from "./_components/ProductInfo";
 import Footer from "./_components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const nanumMyeongjo = Nanum_Myeongjo({ subsets: ["latin"], weight: "400" });
 
@@ -32,6 +32,7 @@ export default function RootLayout({
                     <ContactForm />
                     <Footer />
                 </div>
+                <Analytics />
             </body>
         </html>
     );
