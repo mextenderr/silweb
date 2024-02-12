@@ -6,32 +6,32 @@ export default function Footer() {
         <footer className="w-full bg-white py-8">
             <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-6">
                 <div className="flex items-center gap-4">
-                    <Image
+                    {/* <Image
                         src="/company-logo.png"
                         width={50}
                         height={50}
                         alt="Company Logo"
-                    />
+                    /> */}
                     <span className="font-semibold text-lg">
                         Your Company Name
                     </span>
                 </div>
                 <div className="flex items-center gap-4">
-                    <Image
+                    {/* <Image
                         src="/phone-icon.png"
                         width={20}
                         height={20}
                         alt="Phone Icon"
-                    />
+                    /> */}
                     <span>(123) 456-7890</span>
                 </div>
                 <div className="flex items-center gap-4">
-                    <Image
+                    {/* <Image
                         src="/email-icon.png"
                         width={20}
                         height={20}
                         alt="Email Icon"
-                    />
+                    /> */}
                     <span>info@example.com</span>
                 </div>
                 <div className="flex items-center gap-4">
