@@ -25,7 +25,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={nanumMyeongjo.className}>
                 <Header />
-                <div className="flex flex-col gap-24 bg-orange-50 items-center">
+                <div className="flex flex-col gap-24 bg-orange-50 items-center overflow-x-hidden">
                     <HeaderImage />
                     <HeaderQuote />
                     <ProductInfo />

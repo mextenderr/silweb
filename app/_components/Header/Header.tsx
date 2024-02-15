@@ -1,14 +1,21 @@
 "use client";
+import { useDeviceType } from "@/app/_hooks/useDeviceType";
+import DesktopHeader from "./DesktopHeader";
+import PhoneHeader from "./PhoneHeader";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
-    const [showBackground, setShowBackground] = useState(false);
+    const pathname = usePathname();
+    const { isDesktop } = useDeviceType();
+
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [openSidebar, setOpenSidebar] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            setShowBackground(scrollY > 100);
+            setIsScrolled(scrollY > 100);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -18,42 +25,28 @@ export default function Header() {
         };
     }, []);
 
-    return (
-        <div
-            className={`fixed z-20 w-full h-[100px] px-40 bg-white flex justify-between items-center transition-all duration-700 ${
-                showBackground ? "bg-opacity-95" : "bg-opacity-0"
-            }`}
-        >
-            <Image
-                src={"/logo-placeholder-image.png"}
-                alt="logo"
-                width={100}
-                height={100}
-            />
-
-            <div className="flex gap-14">
-                <HeaderLinkItem scrollY={0}>Home</HeaderLinkItem>
-                <HeaderLinkItem scrollY={300}>Over</HeaderLinkItem>
-                <HeaderLinkItem scrollY={500}>Contact</HeaderLinkItem>
-            </div>
-        </div>
-    );
-}
-
-function HeaderLinkItem({
-    children,
-    scrollY,
-}: Readonly<{ children: React.ReactNode; scrollY: number }>) {
-    function onClickHandler() {
-        window.scrollTo({ top: scrollY, behavior: "smooth" });
+    function sidebarClickHandler() {
+        setOpenSidebar(!openSidebar);
     }
 
+    useEffect(() => {
+        setOpenSidebar(false);
+    }, [pathname]);
+
     return (
         <div
-            className="text-2xl font-bold underline hover:cursor-pointer"
-            onClick={onClickHandler}
+            className={`fixed z-20 w-full h-[100px] sm:px-40 bg-white transition-all duration-700 overflow-y-hidden ${
+                isScrolled || openSidebar ? "bg-opacity-95" : "bg-opacity-0"
+            }`}
         >
-            {children}
+            {isDesktop ? (
+                <DesktopHeader />
+            ) : (
+                <PhoneHeader
+                    openSidebar={openSidebar}
+                    sidebarClickHandler={sidebarClickHandler}
+                />
+            )}
         </div>
     );
 }
