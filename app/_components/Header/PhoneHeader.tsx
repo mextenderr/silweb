@@ -40,7 +40,7 @@ export default function PhoneHeader({
                 </div>
             </div>
             <div
-                className={`fixed top-[100px] w-full h-full bg-white z-10 transition-all duration-700 ${
+                className={`fixed top-[80px] w-full h-full bg-white z-10 transition-all duration-700 ${
                     openSidebar
                         ? "bg-opacity-95 overflow-y-hidden"
                         : "opacity-0 pointer-events-none"

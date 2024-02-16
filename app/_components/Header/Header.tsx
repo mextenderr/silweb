@@ -35,7 +35,7 @@ export default function Header() {
 
     return (
         <div
-            className={`fixed z-20 w-full h-[100px] sm:px-40 bg-white transition-all duration-700 overflow-y-hidden ${
+            className={`fixed z-20 w-full sm:h-[100px] h-[80px] sm:px-40 bg-white transition-all duration-700 overflow-y-hidden ${
                 isScrolled || openSidebar ? "bg-opacity-95" : "bg-opacity-0"
             }`}
         >
