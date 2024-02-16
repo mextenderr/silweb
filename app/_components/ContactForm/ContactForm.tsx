@@ -65,10 +65,14 @@ export default function ContactForm() {
                     className="w-full border rounded-md p-2"
                     required
                     disabled={completed || error}
-                    onInvalid={(e) =>
-                        e.target.setCustomValidity("Vul hier je naam in.")
-                    }
-                    onInput={(e) => e.target.setCustomValidity("")}
+                    onInvalid={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        target.setCustomValidity("Vul hier jouw naam in.");
+                    }}
+                    onInput={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        target.setCustomValidity("");
+                    }}
                 />
             </div>
 
@@ -88,10 +92,16 @@ export default function ContactForm() {
                     className="w-full border rounded-md p-2"
                     required
                     disabled={completed || error}
-                    onInvalid={(e) =>
-                        e.target.setCustomValidity("Vul hier je Email in.")
-                    }
-                    onInput={(e) => e.target.setCustomValidity("")}
+                    onInvalid={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        target.setCustomValidity(
+                            "Vul hier jouw email adres in."
+                        );
+                    }}
+                    onInput={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        target.setCustomValidity("");
+                    }}
                 />
             </div>
 
@@ -111,10 +121,14 @@ export default function ContactForm() {
                     className="w-full border rounded-md p-2"
                     required
                     disabled={completed || error}
-                    onInvalid={(e) =>
-                        e.target.setCustomValidity("Vul hier jouw wens in.")
-                    }
-                    onInput={(e) => e.target.setCustomValidity("")}
+                    onInvalid={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        target.setCustomValidity("Vul hier jouw wens in.");
+                    }}
+                    onInput={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        target.setCustomValidity("");
+                    }}
                 ></textarea>
             </div>
 
