@@ -65,6 +65,10 @@ export default function ContactForm() {
                     className="w-full border rounded-md p-2"
                     required
                     disabled={completed || error}
+                    onInvalid={(e) =>
+                        e.target.setCustomValidity("Vul hier je naam in.")
+                    }
+                    onInput={(e) => e.target.setCustomValidity("")}
                 />
             </div>
 
@@ -84,6 +88,10 @@ export default function ContactForm() {
                     className="w-full border rounded-md p-2"
                     required
                     disabled={completed || error}
+                    onInvalid={(e) =>
+                        e.target.setCustomValidity("Vul hier je Email in.")
+                    }
+                    onInput={(e) => e.target.setCustomValidity("")}
                 />
             </div>
 
@@ -103,10 +111,14 @@ export default function ContactForm() {
                     className="w-full border rounded-md p-2"
                     required
                     disabled={completed || error}
+                    onInvalid={(e) =>
+                        e.target.setCustomValidity("Vul hier jouw wens in.")
+                    }
+                    onInput={(e) => e.target.setCustomValidity("")}
                 ></textarea>
             </div>
 
-            <div className="left-0 right-0 mx-auto w-1/2">
+            <div className="left-0 right-0 mx-auto w-4/5 sm:w-1/2">
                 <button
                     type="submit"
                     className="border-2 py-2 px-4 w-full rounded-full"
