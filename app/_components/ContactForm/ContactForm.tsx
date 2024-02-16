@@ -109,7 +109,7 @@ export default function ContactForm() {
             <div className="left-0 right-0 mx-auto w-1/2">
                 <button
                     type="submit"
-                    className="border-2 py-2 px-4 w-full rounded-full hover:bg-black"
+                    className="border-2 py-2 px-4 w-full rounded-full"
                     disabled={completed || loading || error}
                 >
                     {completed ? (
