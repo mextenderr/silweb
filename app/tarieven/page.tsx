@@ -7,7 +7,7 @@ export default function Tarieven() {
             <div className="relative h-full z-10">
                 <Image
                     className="blur"
-                    src="/Tarievenpagina.jpg"
+                    src="/images/Tarievenpagina.jpg"
                     alt="Tarievenpagina"
                     objectFit="cover"
                     fill

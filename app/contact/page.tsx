@@ -9,7 +9,7 @@ export default function Contact() {
             <div className="relative h-full z-10">
                 <Image
                     className="blur-2xl sm:blur-3xl"
-                    src="/rings.jpg"
+                    src="/images/rings.jpg"
                     alt="Tarievenpagina"
                     objectFit="cover"
                     fill

@@ -7,7 +7,7 @@ export default function Logo() {
 
     return (
         <Image
-            src={"/logo-placeholder-image.png"}
+            src={"/images/logo-placeholder-image.png"}
             alt="logo"
             width={isDesktop ? 100 : 80}
             height={isDesktop ? 100 : 80}
