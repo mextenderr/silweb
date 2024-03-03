@@ -13,7 +13,7 @@ export default function Tarieven() {
                     fill
                 />
                 <div className="flex flex-col gap-20 sm:gap-36 sm:pt-[100px] pt-[80px] blur-none">
-                    <h1 className="mt-16 text-3xl sm:text-5xl font-bold text-center">
+                    <h1 className="mt-16 text-3xl sm:text-5xl font-bold text-center w-4/5 left-0 right-0 mx-auto">
                         Voor jouw unieke feest hebben wij een passende prijs
                     </h1>
                     <div className="flex flex-col items-center sm:flex-row justify-center gap-16 sm:gap-80">
