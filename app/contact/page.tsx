@@ -10,7 +10,7 @@ export default function Contact() {
                 <Image
                     className="blur-2xl sm:blur-3xl"
                     src="/images/rings.jpg"
-                    alt="Tarievenpagina"
+                    alt="rings"
                     objectFit="cover"
                     fill
                 />
