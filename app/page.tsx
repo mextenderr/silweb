@@ -86,6 +86,7 @@ export default function Home() {
                             loop
                             muted
                             disablePictureInPicture
+                            playsInline
                             className="object-cover w-full h-full z-30"
                         >
                             <source
@@ -122,23 +123,23 @@ export default function Home() {
                         </h3>
                     </FadeInView>
                     <FadeInView>
-                        <div className="relative w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] left-0 right-0 mx-auto">
-                            <Image
-                                src="/images/magic-ball-placeholder.png"
-                                alt="De Wensbol"
-                                fill
-                            />
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-20 sm:gap-10">
+                            <div className="relative w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] left-0 right-0 mx-auto">
+                                <Image
+                                    src="/images/magic-ball-placeholder.png"
+                                    alt="De Wensbol"
+                                    fill
+                                />
+                            </div>
+                            <p className="w-4/5 sm:w-1/2 left-0 right-0 mx-auto text-lg sm:text-2xl text-center">
+                                De wensbol biedt jou de kans om midden tussen je
+                                geliefden een speciale boodschap in te spreken
+                                voor het gelukkige bruidspaar. Stap om de tafel
+                                heen, vertel jouw mooiste wens en laat deze deel
+                                uitmaken van de onvergetelijke dag die jouw
+                                geliefden aan het beleven zijn.
+                            </p>
                         </div>
-                    </FadeInView>
-                    <FadeInView>
-                        <p className="w-4/5 left-0 right-0 mx-auto text-lg sm:text-2xl text-center">
-                            De wensbol biedt jou de kans om midden tussen je
-                            geliefden een speciale boodschap in te spreken voor
-                            het gelukkige bruidspaar. Stap om de tafel heen,
-                            vertel jouw mooiste wens en laat deze deel uitmaken
-                            van de onvergetelijke dag die jouw geliefden aan het
-                            beleven zijn.
-                        </p>
                     </FadeInView>
                     <FadeInView>
                         <hr className="bg-gray-100 h-0.5 w-4/5 sm:w-1/2 left-0 right-0 mx-auto" />
@@ -152,13 +153,13 @@ export default function Home() {
                     <FadeInView>
                         <Link
                             href={"/contact"}
-                            className="flex justify-center left-0 right-0 mx-auto w-3/5 mb-20"
+                            className="flex justify-center left-0 right-0 mx-auto mb-24 sm:mb-44 mt-4"
                         >
                             <button
                                 type="button"
-                                className="border-2 bg-gray-100 py-2 px-4 rounded-full"
+                                className="border-2 bg-gray-100 py-2 sm:py-3 px-4 sm:px-8 rounded-full"
                             >
-                                <div className="flex justify-center gap-10 items-center">
+                                <div className="flex justify-center gap-10 items-center sm:text-xl">
                                     Contact <IoIosArrowRoundForward size={30} />
                                 </div>
                             </button>
