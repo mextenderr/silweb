@@ -15,7 +15,7 @@ export async function POST(request: Request) {
         from: "slvn.contact.form@gmail.com",
         to: "max.van.oord@gmail.com",
         subject: "Nieuw Contact Formulier Bericht",
-        text: `Name: ${body.name}\nEmail: ${body.email}\n\nMessage: ${body.message}`,
+        text: `Name: ${body.name}\nEmail: ${body.email}\n\nProduct: ${body.product}\n\n Message: ${body.message}`,
     };
 
     try {

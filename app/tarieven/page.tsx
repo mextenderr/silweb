@@ -26,6 +26,7 @@ export default function Tarieven() {
                                 "Unieke ervaring",
                             ]}
                             price={300}
+                            link="/contact?product=Wensbol-Exclusive"
                         />
                         <PriceCard
                             title="Deluxe"
@@ -36,6 +37,7 @@ export default function Tarieven() {
                                 "Fast service",
                             ]}
                             price={500}
+                            link="/contact?product=Wensbol-Deluxe"
                         />
                     </div>
                     <p className="left-0 right-0 mx-auto text-center text-2xl w-4/5 mb-20">

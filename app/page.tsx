@@ -7,6 +7,8 @@ import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { PiHandTapLight } from "react-icons/pi";
 import { TypeAnimation } from "react-type-animation";
 import FadeInView from "./_components/FadeInView";
+import ContactButton from "./_components/ContactButton/ContactButton";
+import Divider from "./_components/Divider/Divider";
 
 export default function Home() {
     const [showScroll, setShowScroll] = useState<boolean>(false);
@@ -104,7 +106,7 @@ export default function Home() {
                         <IoArrowDownCircleOutline size={30} />
                     </div>
                 </div>
-                <div className="flex flex-col w-10/12 left-0 right-0 mx-auto sm:w-8/12 gap-20 sm:gap-40 mt-20 sm:mt-40">
+                <div className="flex flex-col w-10/12 left-0 right-0 mx-auto sm:w-8/12 gap-20 sm:gap-40 mt-20 sm:mt-40 pb-20">
                     <FadeInView>
                         <p className="w-4/5 left-0 right-0 mx-auto text-lg sm:text-2xl text-center">
                             De Magische Wensbol, een betoverende toevoeging aan
@@ -115,7 +117,7 @@ export default function Home() {
                         </p>
                     </FadeInView>
                     <FadeInView>
-                        <hr className="bg-gray-50 h-0.5 w-4/5 sm:w-1/2 left-0 right-0 mx-auto" />
+                        <Divider />
                     </FadeInView>
                     <FadeInView>
                         <h3 className="text-2xl sm:text-5xl font-bold text-center">
@@ -142,7 +144,7 @@ export default function Home() {
                         </div>
                     </FadeInView>
                     <FadeInView>
-                        <hr className="bg-gray-100 h-0.5 w-4/5 sm:w-1/2 left-0 right-0 mx-auto" />
+                        <Divider />
                     </FadeInView>
                     <FadeInView>
                         <p className="w-4/5 left-0 right-0 mx-auto text-3xl text-center">
@@ -151,19 +153,7 @@ export default function Home() {
                         </p>
                     </FadeInView>
                     <FadeInView>
-                        <Link
-                            href={"/contact"}
-                            className="flex justify-center left-0 right-0 mx-auto mb-24 sm:mb-44 mt-4"
-                        >
-                            <button
-                                type="button"
-                                className="border-2 bg-gray-100 py-2 sm:py-3 px-4 sm:px-8 rounded-full"
-                            >
-                                <div className="flex justify-center gap-10 items-center sm:text-xl">
-                                    Contact <IoIosArrowRoundForward size={30} />
-                                </div>
-                            </button>
-                        </Link>
+                        <ContactButton />
                     </FadeInView>
                 </div>
             </div>

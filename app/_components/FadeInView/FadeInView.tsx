@@ -7,7 +7,7 @@ export default function FadeInView({ children }: { children: ReactNode }) {
     return (
         <div
             ref={ref}
-            className={`opacity-${
+            className={`w-full flex justify-center opacity-${
                 inView ? 100 : 0
             } transition-all duration-1000`}
         >

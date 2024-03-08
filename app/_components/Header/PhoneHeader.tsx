@@ -1,3 +1,4 @@
+"use client";
 import Logo from "../Logo";
 import { IoClose } from "react-icons/io5";
 import HeaderLinkItem from "./HeaderLinkItem";
