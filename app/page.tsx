@@ -87,6 +87,7 @@ export default function Home() {
                             muted
                             disablePictureInPicture
                             playsInline
+                            disableRemotePlayback
                             className="object-cover w-full h-full z-30"
                         >
                             <source
