@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { PiHandTapLight } from "react-icons/pi";
 import { TypeAnimation } from "react-type-animation";
