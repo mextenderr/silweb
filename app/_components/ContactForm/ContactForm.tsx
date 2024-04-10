@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BsSend, BsSendArrowUp, BsSendCheck } from "react-icons/bs";
 
 export default function ContactForm() {
@@ -152,7 +152,7 @@ export default function ContactForm() {
                 >
                     <option value="Wensbol Exclusive">Wensbol Exclusive</option>
                     <option value="Wensbol Deluxe">Wensbol Deluxe</option>
-                    <option value="Weet ik niet.">Weet ik niet.</option>
+                    <option value="Algemene Vragen">Algemene Vragen</option>
                 </select>
             </div>
 
@@ -161,7 +161,11 @@ export default function ContactForm() {
                     htmlFor="message"
                     className="block text-gray-700 font-bold mb-2"
                 >
-                    Jouw wens:
+                    {formData.product === "Wensbol Exclusive"
+                        ? "Jouw Exclusieve Wens:"
+                        : formData.product === "Algemene Vragen"
+                        ? "Jouw Wens:"
+                        : "Jouw Deluxe Wens:"}
                 </label>
                 <textarea
                     id="message"

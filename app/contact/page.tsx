@@ -48,8 +48,8 @@ export default function Contact() {
                             <FadeInView>
                                 <p className="flex gap-4 items-center text-3xl sm:text-5xl font-bold">
                                     <BiPhone size={30} />
-                                    <a href="tel:+31123456789">
-                                        +31 (0)123 456 789
+                                    <a href="tel:+31629052041">
+                                        +31 6 29 05 20 41
                                     </a>
                                 </p>
                             </FadeInView>
@@ -57,7 +57,7 @@ export default function Contact() {
                                 <p className="flex gap-4 items-center text-3xl sm:text-5xl font-bold">
                                     <BiMailSend size={30} />
                                     <a href="mailto:info@example.com">
-                                        contact@slvn.nl
+                                        contact@slvnevents.nl
                                     </a>
                                 </p>
                             </FadeInView>

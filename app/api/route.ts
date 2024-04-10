@@ -13,7 +13,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
         from: "slvn.contact.form@gmail.com",
-        to: "max.van.oord@gmail.com",
+        to: "slvn.events@gmail.com",
         subject: "Nieuw Contact Formulier Bericht",
         text: `Name: ${body.name}\nEmail: ${body.email}\n\nProduct: ${body.product}\n\n Message: ${body.message}`,
     };

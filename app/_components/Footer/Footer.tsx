@@ -21,7 +21,7 @@ export default function Footer() {
                         height={20}
                         alt="Phone Icon"
                     /> */}
-                    <span>+31 + 12345678</span>
+                    <span>+31 6 29 05 20 41</span>
                 </div>
                 <div className="flex items-center gap-4">
                     {/* <Image
