@@ -11,8 +11,8 @@ export default function Logo() {
             <Image
                 src={"/images/slvn-logo.png"}
                 alt="logo"
-                width={isDesktop ? 200 : 80}
-                height={isDesktop ? 200 : 80}
+                width={isDesktop ? 200 : 120}
+                height={isDesktop ? 200 : 120}
             />
         </Link>
     );

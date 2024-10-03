@@ -4,13 +4,14 @@ import "./globals.css";
 import Header from "./_components/Header";
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "./_components/Footer";
-import Link from "next/link";
+import { Lora } from "next/font/google";
 
+const lora = Lora({ subsets: ["latin"] });
 const nanumMyeongjo = Nanum_Myeongjo({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
     title: "SLVN Events",
-    description: "Website for Silvano",
+    description: "SLVN Events met Wensbol naar keuze",
 };
 
 export default function RootLayout({
@@ -19,11 +20,28 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="nl">
             <head>
-                <Link href="/images/slvn-logo.png" rel="icon" />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="/apple-touch-icon.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="32x32"
+                    href="/favicon-32x32.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="16x16"
+                    href="/favicon-16x16.png"
+                />
+                <link rel="manifest" href="/site.webmanifest" />
             </head>
-            <body className={`${nanumMyeongjo.className} overflow-y-scroll`}>
+            <body className={`${lora.className} overflow-y-scroll`}>
                 <Header />
                 {children}
                 <Footer />

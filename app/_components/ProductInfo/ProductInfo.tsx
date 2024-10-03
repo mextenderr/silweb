@@ -18,10 +18,10 @@ export default function ProductInfo() {
                     Verrijk je bruiloftsbeleving met ons innovatieve
                     opname-apparaat. Jouw gasten kunnen hun liefde en goede
                     wensen delen door simpelweg in de microfoon te spreken,
-                    terwijl de 360-graden camera hun oprechte uitdrukkingen
-                    vastlegt. Deze interactieve herinnering voegt een
-                    persoonlijke touch toe aan jullie speciale dag, waardoor
-                    herinneringen ontstaan die een leven lang worden gekoesterd.
+                    terwijl de 360° camera hun oprechte uitdrukkingen vastlegt.
+                    Deze interactieve herinnering voegt een persoonlijke touch
+                    toe aan jullie speciale dag, waardoor herinneringen ontstaan
+                    die een leven lang worden gekoesterd.
                 </p>
             </div>
         </div>

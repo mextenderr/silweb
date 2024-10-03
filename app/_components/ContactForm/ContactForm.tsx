@@ -14,7 +14,7 @@ export default function ContactForm() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        product: "Wensbol Exclusive",
+        product: "Algemene Vragen",
         message: "",
     });
 
@@ -108,7 +108,7 @@ export default function ContactForm() {
                     htmlFor="email"
                     className="block text-gray-700 font-bold mb-2"
                 >
-                    Email:
+                    E-mail:
                 </label>
                 <input
                     type="email"
@@ -137,22 +137,22 @@ export default function ContactForm() {
                     htmlFor="product"
                     className="block text-gray-700 font-bold mb-2"
                 >
-                    Product:
+                    Aanvraag:
                 </label>
                 <select
                     id="product"
                     name="product"
                     value={formData.product}
                     onChange={handleProductChange}
-                    className={`w-full border bg-white rounded-md p-2 ${
+                    className={`w-full border bg-white rounded-md p-2 hover:opacity-90 transition-all duration-200 cursor-pointer ${
                         highlightProduct && "border-green-500 shadow-xl"
                     }`}
                     required
                     disabled={completed || error}
                 >
+                    <option value="Algemene Vragen">Algemene Vragen</option>
                     <option value="Wensbol Exclusive">Wensbol Exclusive</option>
                     <option value="Wensbol Deluxe">Wensbol Deluxe</option>
-                    <option value="Algemene Vragen">Algemene Vragen</option>
                 </select>
             </div>
 
@@ -201,7 +201,7 @@ export default function ContactForm() {
                         Verzenden... <BsSendArrowUp />
                     </div>
                 ) : (
-                    <div className="flex justify-center gap-5 items-center">
+                    <div className="flex justify-center gap-5 items-center hover:opacity-70">
                         Verzenden <BsSend />
                     </div>
                 )}

@@ -1,50 +1,39 @@
-import Image from "next/image";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-white py-10 z-60">
-            <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-10">
+        <footer className="w-full bg-white pt-10 pb-5 z-60">
+            <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-5">
                 <div className="flex items-center gap-4">
-                    {/* <Image
-                        src="/company-logo.png"
-                        width={50}
-                        height={50}
-                        alt="Company Logo"
-                    /> */}
-                    <span className="font-semibold text-lg">SLVN</span>
+                    <span className="font-semibold text-2xl">SLVN Events</span>
                 </div>
-                <div className="flex items-center gap-4">
-                    {/* <Image
-                        src="/phone-icon.png"
-                        width={20}
-                        height={20}
-                        alt="Phone Icon"
-                    /> */}
-                    <span>+31 6 29 05 20 41</span>
+                <div className="flex items-center gap-4 text-lg sm:text-xl">
+                    <a href="tel:+31629052041">+31 6 29 05 20 41</a>
                 </div>
-                <div className="flex items-center gap-4">
-                    {/* <Image
-                        src="/email-icon.png"
-                        width={20}
-                        height={20}
-                        alt="Email Icon"
-                    /> */}
-                    <span>contact@slvn.nl</span>
+                <div className="flex items-center gap-4 text-lg sm:text-xl">
+                    <a href="mailto:info@slvnevents.nl">info@slvnevents.nl</a>
                 </div>
-                <div className="flex items-center gap-4">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <FaFacebook size={20} />
+                <div className="flex gap-12">
+                    <a
+                        href="https://www.facebook.com/people/SLVN-Events/61565671043068"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaFacebook size={35} />
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <FaTwitter size={20} />
+                    <a href="https://wa.me/+31629052041">
+                        <FaWhatsapp size={35} />
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <FaInstagram size={20} />
+                    <a
+                        href="https://www.instagram.com/slvnevents"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaInstagram size={35} />
                     </a>
                 </div>
-                <p className="text-sm">
-                    &copy; 2024 SLVN. All rights reserved.
+                <p className="text-xs sm:text-sm">
+                    &copy; 2024 SLVN Events. All rights reserved.
                 </p>
             </div>
         </footer>

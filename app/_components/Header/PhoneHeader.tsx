@@ -15,7 +15,7 @@ export default function PhoneHeader({
 }: PhoneHeaderProps) {
     return (
         <>
-            <div className="grid grid-cols-3 w-full items-center justify-between">
+            <div className="grid grid-cols-3 w-full items-center justify-between h-full">
                 <div
                     className="ml-3 flex items-center"
                     onClick={sidebarClickHandler}

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
-import { PiHandTapLight } from "react-icons/pi";
 import { TypeAnimation } from "react-type-animation";
 import FadeInView from "./_components/FadeInView";
 import ContactButton from "./_components/ContactButton/ContactButton";
@@ -16,7 +15,7 @@ export default function Home() {
         if (showVideo) {
             setTimeout(() => {
                 setShowScroll(true);
-            }, 10000);
+            }, 500);
         }
     }, [showVideo]);
 
@@ -48,7 +47,7 @@ export default function Home() {
             <div className="blur-none">
                 <div className="relative h-screen flex flex-col justify-center gap-14">
                     <div className="flex flex-col gap-2 sm:gap-4 items-center">
-                        <h1 className="mt-10 sm:mt-20 text-5xl sm:text-8xl font-bold text-center w-4/5 left-0 right-0 mx-auto">
+                        <h1 className="mt-10 sm:mt-20 text-5xl sm:text-8xl text-center w-4/5 left-0 right-0 mx-auto">
                             De Wensbol
                         </h1>
                         <h2 className="text-lg sm:text-xl">
@@ -70,8 +69,14 @@ export default function Home() {
                             />
                         </h2>
                     </div>
-                    <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-full overflow-hidden shadow-2xl left-0 right-0 mx-auto">
-                        <div
+                    <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-full overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] left-0 right-0 mx-auto">
+                        <Image
+                            src="/images/wensbol-afstandschot.jpeg"
+                            alt="De Wensbol"
+                            fill
+                            objectFit="cover"
+                        />
+                        {/* <div
                             className={`absolute w-full h-full flex justify-center items-center bg-black transition-all duration-1000 ${
                                 showVideo
                                     ? "bg-opacity-0 opacity-0"
@@ -95,7 +100,7 @@ export default function Home() {
                                 type="video/mp4"
                             />
                             Your browser does not support the video tag.
-                        </video>
+                        </video> */}
                     </div>
                     <div
                         className={`absolute w-full flex justify-center bottom-3 animate-bounce transition-all duration-1000 ${
@@ -106,39 +111,62 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex flex-col w-10/12 left-0 right-0 mx-auto sm:w-8/12 gap-20 sm:gap-40 mt-20 sm:mt-40 pb-20">
+                    <div className="flex flex-col">
+                        <FadeInView>
+                            <p className="w-4/5 left-0 right-0 mx-auto text-lg sm:text-2xl text-center">
+                                De Magische Wensbol, een betoverende toevoeging
+                                aan uw bruiloft of partij! <br />
+                                <br /> De Wensbol biedt een complete 360°
+                                ervaring waarbij het dus helemaal niet uitmaakt
+                                waar je staat, jouw wens kan vanuit elke hoek
+                                worden ingesproken.
+                            </p>
+                        </FadeInView>
+                        <FadeInView>
+                            <p className="w-4/5 left-0 right-0 mx-auto text-lg sm:text-2xl text-center">
+                                <br />
+                                De Wensbol biedt een betoverende ervaring
+                                waarbij technische aspecten subtiel verborgen
+                                blijven. Ook is het een extra mooi stukje
+                                decoratie voor een bruiloft, jubileum of
+                                bedrijfsevenement. De Magische Wensbol
+                                transformeert elke gelegenheid tot iets
+                                bijzonders.
+                            </p>
+                        </FadeInView>
+                        <FadeInView>
+                            <p className="w-4/5 left-0 right-0 mx-auto text-xl sm:text-3xl text-center my-20 italic">
+                                Thats Magical!
+                            </p>
+                        </FadeInView>
+                        <FadeInView>
+                            <Divider />
+                        </FadeInView>
+                    </div>
                     <FadeInView>
-                        <p className="w-4/5 left-0 right-0 mx-auto text-lg sm:text-2xl text-center">
-                            De Magische Wensbol, een betoverende toevoeging aan
-                            uw bruiloft of partij! De wensbol biedt een complete
-                            360-graden ervaring waarbij het dus helemaal niet
-                            uitmaakt waar je staat, jouw wens kan vanuit elke
-                            hoek worden ingesproken.
-                        </p>
-                    </FadeInView>
-                    <FadeInView>
-                        <Divider />
-                    </FadeInView>
-                    <FadeInView>
-                        <h3 className="text-2xl sm:text-5xl font-bold text-center">
-                            Niet zomaar een photobooth
+                        <h3 className="text-2xl sm:text-5xl text-center">
+                            Niet zomaar een Gastenboek
                         </h3>
                     </FadeInView>
                     <FadeInView>
                         <div className="flex flex-col sm:flex-row sm:items-center gap-20 sm:gap-10">
-                            <div className="relative w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] left-0 right-0 mx-auto">
+                            <div className="relative w-[200px] h-[300px] sm:w-[400px] sm:h-[500px] left-0 right-0 mx-auto">
                                 <Image
-                                    src="/images/magic-ball-placeholder.png"
+                                    className="rounded-2xl shadow-2xl"
+                                    src="/images/wensbol-afstandschot.jpeg"
                                     alt="De Wensbol"
                                     fill
+                                    objectFit="cover"
                                 />
                             </div>
                             <p className="w-4/5 sm:w-1/2 left-0 right-0 mx-auto text-lg sm:text-2xl text-center">
-                                De wensbol biedt jou de kans om midden tussen je
+                                De Wensbol biedt jou de kans om midden tussen je
                                 geliefden een speciale boodschap in te spreken
-                                voor het gelukkige bruidspaar. Stap om de tafel
-                                heen, vertel jouw mooiste wens en laat deze deel
-                                uitmaken van de onvergetelijke dag die jouw
-                                geliefden aan het beleven zijn.
+                                voor het gelukkige bruidspaar.
+                                <br /> Stap om de tafel heen, vertel jouw
+                                mooiste wens en laat deze deel uitmaken van de
+                                onvergetelijke dag die jouw geliefden aan het
+                                beleven zijn.
                             </p>
                         </div>
                     </FadeInView>
@@ -148,7 +176,9 @@ export default function Home() {
                     <FadeInView>
                         <p className="w-4/5 left-0 right-0 mx-auto text-3xl text-center">
                             Dit is de plek waar de magie begint en herinneringen
-                            worden gemaakt. De Wensbol, That's Magical!
+                            worden gemaakt.
+                            <br /> <br />
+                            SLVN Events, <i>That's Magical!</i>
                         </p>
                     </FadeInView>
                     <FadeInView>
