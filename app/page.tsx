@@ -9,15 +9,13 @@ import Divider from "./_components/Divider/Divider";
 
 export default function Home() {
     const [showScroll, setShowScroll] = useState<boolean>(false);
-    const [showVideo, setShowVideo] = useState<boolean>(false);
+    // const [showVideo, setShowVideo] = useState<boolean>(false);
 
     useEffect(() => {
-        if (showVideo) {
-            setTimeout(() => {
-                setShowScroll(true);
-            }, 500);
-        }
-    }, [showVideo]);
+        setTimeout(() => {
+            setShowScroll(true);
+        }, 500);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,9 +29,9 @@ export default function Home() {
         };
     }, []);
 
-    function onVideoClick() {
-        setShowVideo(true);
-    }
+    // function onVideoClick() {
+    //     setShowVideo(true);
+    // }
 
     return (
         <div className="relative h-full">
@@ -54,13 +52,13 @@ export default function Home() {
                             <TypeAnimation
                                 sequence={[
                                     "Maak het magisch",
-                                    5000,
+                                    2500,
                                     "Maak het onvergetelijk",
-                                    5000,
+                                    2500,
                                 ]}
                                 cursor={false}
                                 wrapper="span"
-                                speed={15}
+                                speed={30}
                                 style={{
                                     fontSize: "inherit",
                                     display: "inline-block",
@@ -104,7 +102,7 @@ export default function Home() {
                     </div>
                     <div
                         className={`absolute w-full flex justify-center bottom-3 animate-bounce transition-all duration-1000 ${
-                            showScroll ? "opacity-100" : "opacity-0"
+                            !showScroll ? "opacity-0" : "opacity-100"
                         }`}
                     >
                         <IoArrowDownCircleOutline size={30} />
@@ -116,27 +114,26 @@ export default function Home() {
                             <p className="w-4/5 left-0 right-0 mx-auto text-lg sm:text-2xl text-center">
                                 De Magische Wensbol, een betoverende toevoeging
                                 aan uw bruiloft of partij! <br />
-                                <br /> De Wensbol biedt een complete 360°
+                                <br /> De Wensbol realiseert een complete 360°
                                 ervaring waarbij het dus helemaal niet uitmaakt
-                                waar je staat, jouw wens kan vanuit elke hoek
+                                waar je staat; jouw wens kan vanuit elke hoek
                                 worden ingesproken.
                             </p>
                         </FadeInView>
                         <FadeInView>
                             <p className="w-4/5 left-0 right-0 mx-auto text-lg sm:text-2xl text-center">
                                 <br />
-                                De Wensbol biedt een betoverende ervaring
-                                waarbij technische aspecten subtiel verborgen
-                                blijven. Ook is het een extra mooi stukje
-                                decoratie voor een bruiloft, jubileum of
-                                bedrijfsevenement. De Magische Wensbol
-                                transformeert elke gelegenheid tot iets
-                                bijzonders.
+                                Het schept een betoverende beleving, waarbij
+                                technische aspecten subtiel verborgen blijven.
+                                Ook is het een extra mooi stukje decoratie voor
+                                een bruiloft, jubileum of bedrijfsevenement. De
+                                Magische Wensbol transformeert elke gelegenheid
+                                tot iets bijzonders.
                             </p>
                         </FadeInView>
                         <FadeInView>
                             <p className="w-4/5 left-0 right-0 mx-auto text-xl sm:text-3xl text-center my-20 italic">
-                                Thats Magical!
+                                That's Magical!
                             </p>
                         </FadeInView>
                         <FadeInView>

@@ -34,7 +34,7 @@ export default function Contact() {
                                     de perfecte ervaring neer te zetten.
                                 </p>
                                 <p className="text-sm sm:text-xl text-center w-10/12 sm:w-8/12 mt-16 mb-6 italic">
-                                    Binnen 24 uur nemen wij contact met u op.
+                                    Binnen 24 uur nemen wij contact op.
                                 </p>
                                 <div className="w-10/12 flex justify-center">
                                     <ContactForm />

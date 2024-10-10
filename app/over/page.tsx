@@ -47,7 +47,7 @@ export default function Over() {
                     <p className="w-4/5 sm:w-1/2 h-[200px] left-0 right-0 mx-auto text-xl sm:text-2xl text-center">
                         <TypeAnimation
                             sequence={[
-                                "Bij SLVN Events geloven we in het creeren van magische momenten die mensen voor altijd zullen bijblijven.",
+                                "Bij SLVN Events geloven we in het creëren van magische momenten die mensen voor altijd zullen bijblijven.",
                             ]}
                             wrapper="span"
                             speed={95}
@@ -101,7 +101,7 @@ export default function Over() {
                             Vanaf het allereerste idee na de Magische Wensbol
                             was ons doel duidelijk; we wilden producten
                             ontwikkelen die niet alleen functioneel zijn, maar
-                            ook de verbeelding prikkellen en een gevoel van
+                            ook de verbeelding prikkelen en een gevoel van
                             verwondering opwekken.
                             <br />
                             Daarom hebben we ons gericht op het verbergen van de
